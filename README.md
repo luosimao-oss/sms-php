@@ -19,7 +19,7 @@
 可通过 Composer 直接安装：
 
 ```bash
-composer require luosimao-oss/sms-php
+composer require luosimao/sms-php
 ```
 
 ## 快速使用
