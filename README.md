@@ -16,10 +16,10 @@
 
 ## 安装
 
-可以通过 Composer 直接安装（目前作为本地库开发中，未来将发布至 Packagist）：
+可通过 Composer 直接安装：
 
 ```bash
-composer require luosimao/sms-sdk
+composer require luosimao-oss/sms-php
 ```
 
 ## 快速使用
@@ -29,7 +29,7 @@ composer require luosimao/sms-sdk
 ```php
 use Luosimao\SmsSdk\Sms;
 
-// 填入你的 API Key，系统会自动补全 key- 前缀和鉴权细节
+// 填入你的 API Key，系统会自动补全 key- 前缀和鉴权细节，在官网后台短信->触发发送下获取
 $apiKey = 'your_luosimao_api_key';
 
 // 可选配置
@@ -46,7 +46,7 @@ $sms = new Sms($apiKey, $config);
 ```php
 try {
     $mobile = '13800138000';
-    $message = '验证码：123456【你的公司名】'; // 请务必包含签名
+    $message = '验证码：123456【你的公司名】'; // 请务必包含签名，测试可用：铁壳测试 ，正式签名可在官网后台签名管理下新增报备，报备完成后可用。
 
     $result = $sms->send($mobile, $message);
     
